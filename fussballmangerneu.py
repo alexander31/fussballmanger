@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import rapidfanprogramm
+
 
 
 geld=500
@@ -21,7 +21,7 @@ def spielerverkauf(spieler,geld):
         geld=geld+150
         spieler=spieler-1
     else:
-        print 'Du kannst keine Spieler verkaufen , da du keine besitzt.'
+        print('Du kannst keine Spieler verkaufen , da du keine besitzt.')
     return spieler,geld
 
 def beobachten():
@@ -55,7 +55,7 @@ while True:
     print ('geld:',geld)
     print ('spieler:',spieler)
     
-    antwort=raw_input('Deine Wahl ?')
+    antwort=input ('Deine Wahl ?')
     
     if antwort=='0':
        verlassen()
@@ -78,7 +78,7 @@ while True:
     
        
     if antwort=='4':
-        print 'Du schickst deine Spieler jetzt ins Trainingslager !'
+        print ('Du schickst deine Spieler jetzt ins Trainingslager !')
         
    
 
