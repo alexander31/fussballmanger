@@ -37,7 +37,14 @@ def verlassen():
    print ('du verlässt das Spiel')
    return
 
-
+def trainingslager():
+    print ('0...Trainingsmenü verlassen')
+    print ('1...Taktik trainieren')
+    print ('2...Ballkontrolle trainieren')
+    print ('3...Kondition verbessern')
+    print ('4...Laufgeschwindichkeit verbessern')
+    print ('5...Ausdauer trainieren')
+    print ('6...Passgenauigkeit verbessern')
 
 
 
@@ -52,6 +59,7 @@ while True:
     print('3... Bei einem Match zuschauen')
     print('4... Spieler ins Trainingslager schicken')
     print('5... Stadion besuchen')
+    print('6... Traininglager besuchen')
     print ('geld:',geld)
     print ('spieler:',spieler)
     
@@ -85,6 +93,9 @@ while True:
     if antwort=='5':
         besuchen()
         break
+        
+    if antwort=='6':
+        trainingslager()
         
     
         
