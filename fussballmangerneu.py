@@ -53,6 +53,9 @@ def illegal():
     print ('3...Dose auf das Spielfeld werfen')
     print ('4...Hooligans informieren')
     print ('5...Gegnerischen Spieler verletzen')
+    print ('5...Eigene Spieler dopen')
+    print ('6...Generische Fans verletzen')
+    print ('7...Platzsturm')
 
 while True:
     print('')
