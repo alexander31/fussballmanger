@@ -1,0 +1,4 @@
+fussballmanger
+==============
+
+simple python game
