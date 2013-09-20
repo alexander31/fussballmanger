@@ -46,9 +46,13 @@ def trainingslager():
     print ('5...Ausdauer trainieren')
     print ('6...Passgenauigkeit verbessern')
 
-
-
-
+def illegal():
+    print ('0...Illegales Menü verlassen')
+    print ('1...Schiri bestechen')
+    print ('2...Pyrotechnik zünden')
+    print ('3...Dose auf das Spielfeld werfen')
+    print ('4...Hooligans informieren')
+    print ('5...Gegnerischen Spieler verletzen')
 
 while True:
     print('')
@@ -60,6 +64,7 @@ while True:
     print('4... Spieler ins Trainingslager schicken')
     print('5... Stadion besuchen')
     print('6... Traininglager besuchen')
+    print('7... Illegale Handlungen')
     print ('geld:',geld)
     print ('spieler:',spieler)
     
@@ -96,6 +101,10 @@ while True:
         
     if antwort=='6':
         trainingslager()
+        
+    if antwort=='7':
+        illegal()
+        
         
     
         
