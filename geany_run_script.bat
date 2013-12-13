@@ -1,4 +1,4 @@
-c:\python33\python.exe "fussballmangerneu.py"
+c:\python27\python.exe "fussballmangerneu.py"
 
 pause
 del "%0"
