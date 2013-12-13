@@ -1,9 +1,10 @@
 #-*- coding:utf-8 -*-
 #from __future__ import print
+
 import random
 
 mannschaft=[] 
-geld=500
+geld=1200
 spieler=0
 nummer_strafen=0
 
@@ -63,8 +64,11 @@ class Fussballer():
 LEGENDE:
         ps...passgenauigkeit         +++...Sehr gut
         11...elfmeter                 ++...Gut
-        ko...kontrolle                +~...Naja
-        lf...laufgeschwindichkeit     -~...Schlecht
+                                       +...Passt
+                                      +~...Geht so
+                                      ~-...Nicht so gut
+        ko...kontrolle                -~...Naja
+        lf...laufgeschwindichkeit      -...Schlecht
         gb...gabberln                 --...Sehr schlecht
         sg...sprungkraft'            ---...Super schlecht
             
@@ -240,6 +244,27 @@ def besuchen():
     print ('-------------------------------')
     rapidfanprogramm.main()
     return
+    
+def gegner_anschauen(mannschaft):
+    gegnermannschaften=['Salzburg','Austria','Sturm','Grödig']
+    gegnerische_spieler={"Salzburg":
+                      ["Kevin Kampl","Martin Hinteregger","Jonatan Soriano","Isaac Vorsah","Christoph Leitgeb",
+                       "Stefan Hierländer","Dusan Svento","Andreas Ulmer","Franz Schiemer","Valon Berisha","Florian Klein"],
+                       
+                    "Austria":
+                        ["Markus Suttner","Rubin Okotie","Lukas Rotpuller","Roman Kienast","Philipp Hosiner","Daniel Royer","Fabian Koch"
+                        "Christian Ramsebner","Alexander Grünwald","Manuel Ortlechner","Florian Mader"],
+                        
+                    "Groedig":
+                        ["Robert Strobl"," Stefan Nutz", "Marvin Potzmann", "Adnan Adilovic", "Kevin Fend", "Cican Stankovic",
+                         "Simon Handle", "Philipp Huspek", "Thomas Salamon ","Mario Leitgeb", "Tadej Trdina"   ],  
+                    
+                    "Sturm":
+                        ["Christian Gratzei","Milan Dudic","Andreas Hölzl","Robert Beric","Pascal Legat",
+                         "Daniel Beicher","Marco Djuricin","Anel Hadzic","Nikola Vujadinovic","Benedikt Pliquett","Michael Madel"]}
+    print'du siehst die Spieler der Mannschaft:',mannschaft
+    for mann in gegnerische_spieler[mannschaft]:
+        print (mann)
 
 def verlassen():
    print ('')
@@ -518,7 +543,23 @@ def illegal(geld,nummer_strafen):
             
 
             
-            
+#gegner
+gegnermannschaften=['Salzburg','Austria','Sturm','Grödig']
+generische_spieler={"Salzburg":
+                      ["Kevin Kampl","Martin Hinteregger","Jonatan Soriano","Isaac Vorsah","Christoph Leitgeb",
+                       "Stefan Hierländer","Dusan Svento","Andreas Ulmer","Franz Schiemer","Valon Berisha","Florian Klein"],
+                       
+                    "Austria":
+                        ["Markus Suttner","Rubin Okotie","Lukas Rotpuller","Roman Kienast","Philipp Hosiner","Daniel Royer","Fabian Koch"
+                        "Christian Ramsebner","Alexander Grünwald","Manuel Ortlechner","Florian Mader"],
+                        
+                    "Groedig":
+                        ["Robert Strobl"," Stefan Nutz", "Marvin Potzmann", "Adnan Adilovic", "Kevin Fend", "Cican Stankovic",
+                         "Simon Handle", "Philipp Huspek", "Thomas Salamon ","Mario Leitgeb", "Tadej Trdina"   ],  
+                    
+                    "Sturm":
+                        ["Christian Gratzei","Milan Dudic","Andreas Hölzl","Robert Beric","Pascal Legat",
+                         "Daniel Beicher","Marco Djuricin","Anel Hadzic","Nikola Vujadinovic","Benedikt Pliquett","Michael Madel"]}
 while True:
     print('')
     print('Willkommen , wollen Sie einen Spieler kaufen oder verkaufen oder bei Matches zuschauen , waehlen sie aus')
@@ -532,7 +573,11 @@ while True:
     print('5... Stadion besuchen')
     print('6... Traininglager besuchen')
     print('7... Illegale Handlungen')
-    print('8... Mannschaft anschauen')
+    print('8... Eigene Mannschaft anschauen')
+    print('9a.. Salzburg anschauen')
+    print('9b.. Austria anschauen')
+    print('9c.. Groedig anschauen')
+    print('9d.. Sturm anschauen')
     print('geld: {}'.format(geld))
     print('spieler: {}'.format(spieler))
     print('strafen: {}'.format(nummer_strafen))
@@ -592,6 +637,18 @@ while True:
     if antwort=='7':
         geld,nummer_strafen=illegal(geld,nummer_strafen)
         
+        
+    if antwort=='9a':
+        gegner_anschauen('Salzburg')
+        
+    if antwort=='9b':
+        gegner_anschauen('Austria')
+    
+    if antwort=='9c':
+        gegner_anschauen('Groedig')
+        
+    if antwort=='9d':
+        gegner_anschauen('Sturm')
         
         
         
