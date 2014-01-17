@@ -3,6 +3,7 @@
 
 import random
 
+
 mannschaft=[] 
 geld=1200
 spieler=0
@@ -62,11 +63,12 @@ class Fussballer():
     def legende(self):
         text="""
 LEGENDE:
-        ps...passgenauigkeit         +++...Sehr gut
+                                     +++...Sehr gut
         11...elfmeter                 ++...Gut
                                        +...Passt
                                       +~...Geht so
-                                      ~-...Nicht so gut
+        ps...passgenauigkeit          ~-...Nicht so gut  
+                                      ~~...Eine Schande !
         ko...kontrolle                -~...Naja
         lf...laufgeschwindichkeit      -...Schlecht
         gb...gabberln                 --...Sehr schlecht
@@ -189,7 +191,17 @@ def spielerkauf(spieler,geld,mannschaft,level):
         
     return spieler,geld,mannschaft
     
+
+def spielen(spielen1):
+    w= random.randint(1,2)
+    if w==1:
+        print 'Gegner hat gewonnen,Deine Mannschaft hat gewonnen'
+    else:
+        print 'Der Gegener hat verloren,Deine Mannschaft hat verloren'
     
+
+
+
 def strafe1(strafe):
     if geld>=100:
         geld=geld-100
@@ -272,6 +284,8 @@ def verlassen():
    print ('du verlaesst das Spiel')
    print ('---------------------')
    return
+   
+
 
 def trainingslager():
     while True:
@@ -285,6 +299,7 @@ def trainingslager():
         print ('6...Kondition verbessern')
         print ('7...Gabberln ueben')
         print ('8...Sprung erhoehen')
+        print ('9...Spielen')
         print ('geld:{}'.format(geld))
         print ('spieler:{}'.format(spieler))
         print ('strafe:{}'.format(nummer_strafen))
@@ -401,6 +416,25 @@ def trainingslager():
                     print ('------------------------------------------')
                     print ('Ich glaube das geht noch bisschen hoeher !')
                     print ('------------------------------------------')
+                    
+        elif antwort=='9':
+            #spielen
+            rapid=0.5
+            print ('-----------------------------------------')
+            print (' Deine Mannschaft hat begonnen zu spielen')
+            print ('-----------------------------------------')
+            for versuch in range (1):
+                
+                spielen=random.random()
+                if spielen<=rapid:
+                    print ('-------------------------------')
+                    print ('Deine Mannschaft hat gewonnen !')
+                    print ('-------------------------------')
+                    
+                else:
+                    print ('-------------------------------')
+                    print ('Deine Mannschaft hat verloren !')
+                    print ('-------------------------------')
                 
                 
                 
