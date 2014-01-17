@@ -446,6 +446,16 @@ def erwischt(chance=0.1):
         return True
     else:
         return False
+        
+def besterspieler(mannschaft):
+    if len(mannschaft)>0:
+        print 'Der beste Spieler ist :'+random.choice(mannschaft).name
+    else:
+        print 'Du musst erst einen Spieler kaufen um den besten Spieler sehen zu können !'    
+    
+        
+    
+        
             
         
             
@@ -612,6 +622,7 @@ while True:
     print('9b.. Austria anschauen')
     print('9c.. Groedig anschauen')
     print('9d.. Sturm anschauen')
+    print('10.. Besten Spieler wählen')
     print('geld: {}'.format(geld))
     print('spieler: {}'.format(spieler))
     print('strafen: {}'.format(nummer_strafen))
@@ -683,6 +694,11 @@ while True:
         
     if antwort=='9d':
         gegner_anschauen('Sturm')
+        
+    if antwort=='10':
+        besterspieler(mannschaft)
+        
+   
         
         
         
